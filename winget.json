@@ -1,0 +1,83 @@
+{
+    "$schema": "https://aka.ms/winget-packages.schema.2.0.json",
+    "CreationDate": "2022-07-16T16:04:24.636-00:00",
+    "Sources": [
+        {
+            "Packages": [
+                {
+                    "PackageIdentifier": "Google.Chrome"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.WindowsTerminal"
+                },
+                {
+                    "PackageIdentifier": "Notepad++.Notepad++"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.PowerShell"
+                },
+                {
+                    "PackageIdentifier": "7zip.7zip"
+                },
+                {
+                    "PackageIdentifier": "Git.Git"
+                },
+                {
+                    "PackageIdentifier": "Greenshot.Greenshot"
+                },
+                {
+                    "PackageIdentifier": "OpenJS.NodeJS"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.VisualStudioCode"
+                },
+                {
+                    "PackageIdentifier": "Adobe.Acrobat.Reader.64-bit"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.DotNet.SDK.6"
+                },
+                {
+                    "PackageIdentifier": "Anki.Anki"
+                },
+                {
+                    "PackageIdentifier": "Postman.Postman"
+                },
+                {
+                    "PackageIdentifier": "JetBrains.Toolbox"
+                },
+                {
+                    "PackageIdentifier": "WinMerge.WinMerge"
+                },
+                {
+                    "PackageIdentifier": "XMind.XMind"
+                },
+                {
+                    "PackageIdentifier": "Zoom.Zoom"
+                },
+                {
+                    "PackageIdentifier": "DominikReichl.KeePass"
+                },
+                {
+                    "PackageIdentifier": "RescueTime.DesktopApp"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.AzureStorageExplorer"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.PowerToys"
+                }
+            ],
+            "SourceDetails": {
+                "Argument": "https://cdn.winget.microsoft.com/cache",
+                "Identifier": "Microsoft.Winget.Source_8wekyb3d8bbwe",
+                "Name": "winget",
+                "Type": "Microsoft.PreIndexed.Package"
+            }
+        }
+    ],
+    "WinGetVersion": "1.3.1391-preview"
+}
