@@ -39,19 +39,21 @@ function Start-Docker() {
    wsl.exe -u root -e sh -c "service docker status || service docker start"
 }
 
-Start-Docker
-
-function Set-Shutdown($h) {
-   $t = $h * 60 * 60
+function Set-ShutdownIn($seconds) {
    $dte = Get-Date
-   $dte = $dte.AddSeconds($t)
-   $c = "Shutdown at $dte"
-   shutdown /s /t $t /c $c && $c
+   $dte = $dte.AddSeconds($seconds)
+   $comment = "Shutdown at $dte"
+   shutdown /s /t $seconds /c $comment && $comment
 }
 
-function Get-ShutdownTime() {
-   $dte = Get-Date
-   return NEW-TIMESPAN –Start $dte  –End   (Get-Uptime -Since).AddHours($h) 
+function Set-ShutdownAt($hour, $minute = 0) {
+   $timestamp = New-TimeSpan -Start (Get-Date) -End (Get-Date -Hour $hour -Minute $minute -Second 0)
+
+   if ($timestamp.TotalSeconds -lt 0) {
+      $timestamp = $timestamp + (New-TimeSpan -Days 1)
+   }
+
+   Set-ShutdownIn($timestamp.TotalSeconds -as [int])
 }
 
 function Urlencode {
