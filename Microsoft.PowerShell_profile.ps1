@@ -42,8 +42,8 @@ function Start-Docker() {
 function Set-ShutdownIn($seconds) {
    $dte = Get-Date
    $dte = $dte.AddSeconds($seconds)
-   $comment = "Shutdown at $dte"
-   shutdown /s /t $seconds /c $comment && $comment
+   "Trying to set up shutdown at $dte..."
+   shutdown /s /t $seconds /c "Shutdown at $dte"
 }
 
 function Set-ShutdownAt($hour, $minute = 0) {
@@ -89,8 +89,7 @@ function New-Password {
       [Parameter(Mandatory)]
       [int] $length
    )
-   #$charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{]+-[*=@:)}$^%;(_!&amp;#?>/|.'.ToCharArray()
-   $charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789'.ToCharArray()
+   $charSet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789{]+-[*=@:)}$^%;(_!&amp;#?>/|.'.ToCharArray()
    $rng = New-Object System.Security.Cryptography.RNGCryptoServiceProvider
    $bytes = New-Object byte[]($length)
 
