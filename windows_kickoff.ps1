@@ -25,5 +25,9 @@ winget install JanDeDobbeleer.OhMyPosh -s winget
 Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/winget.json" -OutFile winget.json
 winget import winget.json
 
+#powershell profile
+$tools = (Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/Microsoft.PowerShell_profile.ps1")
+Invoke-Expression($tools.Content)
+
 git config --global user.email ""
 git config --global user.name ""

@@ -42,8 +42,12 @@ function Start-Docker() {
 function Set-ShutdownIn($seconds) {
    $dte = Get-Date
    $dte = $dte.AddSeconds($seconds)
-   "Trying to set up shutdown at $dte..."
-   shutdown /s /t $seconds /c "Shutdown at $dte"
+   $msg = "Shutdown at $dte"
+   $result = shutdown /s /t $seconds /c $msg
+   if ($result -eq 0) {
+      $msg >> "~\.shutdown.log"
+      $msg
+   }
 }
 
 function Set-ShutdownAt($hour, $minute = 0) {
