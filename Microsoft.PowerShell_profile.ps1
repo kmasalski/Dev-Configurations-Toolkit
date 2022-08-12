@@ -44,6 +44,7 @@ function Set-ShutdownIn($seconds) {
    $dte = $dte.AddSeconds($seconds)
    $msg = "Shutdown at $dte"
    $result = shutdown /s /t $seconds /c $msg
+   $result
    if ($result -eq 0) {
       $msg >> "~\.shutdown.log"
       $msg
