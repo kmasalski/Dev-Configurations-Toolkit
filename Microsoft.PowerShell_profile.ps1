@@ -137,6 +137,6 @@ function ConvertTo-DotEnv {
    )
 
    process {
-      return $object.Keys | % { $_ + '=' + $object.Item($_) }
+      return $object.Keys | ForEach-Object { $_ + '=' + $object.Item($_) }
    }
 }

@@ -69,6 +69,12 @@
                 },
                 {
                     "PackageIdentifier": "Microsoft.PowerToys"
+                },
+                {
+                    "PackageIdentifier": "OBSProject.OBSStudio"
+                },
+                {
+                    "PackageIdentifier": "NickeManarin.ScreenToGif"
                 }, 
                 {
                     "PackageIdentifier": "JFLarvoire.Ag"
