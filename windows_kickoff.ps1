@@ -17,6 +17,7 @@ notepad "$env:USERPROFILE/.wslconfig"
 Install-Module -Name Terminal-Icons -Repository PSGallery
 Install-Module -Name PowerShellGet -Force
 Install-Module PSReadLine -AllowPrerelease -Force
+Install-Module -Name z
 
 # install winget from msstore
 
