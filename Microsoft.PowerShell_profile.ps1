@@ -151,10 +151,6 @@ function Start-ProcessIfNotRunning {
    )
 
    process {
-      if ($null -eq $name) {
-         $name = $path
-      }
-
       if ($null -eq (get-process  $name -ea SilentlyContinue)) { 
          Start-Process  $path -ArgumentList $argumentList
      }
