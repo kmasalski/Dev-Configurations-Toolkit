@@ -140,3 +140,23 @@ function ConvertTo-DotEnv {
       return $object.Keys | ForEach-Object { $_ + '=' + $object.Item($_) }
    }
 }
+
+function Start-ProcessIfNotRunning {
+   param (
+      [Parameter(Mandatory)]
+      [string]$path,
+      [Parameter(Mandatory)]
+      [string]$name,
+      [string[]] $argumentList
+   )
+
+   process {
+      if ($null -eq $name) {
+         $name = $path
+      }
+
+      if ($null -eq (get-process  $name -ea SilentlyContinue)) { 
+         Start-Process  $path -ArgumentList $argumentList
+     }
+   }
+}
