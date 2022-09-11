@@ -14,7 +14,7 @@
     notepad "$env:USERPROFILE/.wslconfig"
     ```
 
-1. [install docker and docker compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+1. [Install docker and docker compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
 ## Default applications
 
@@ -27,6 +27,9 @@
     ```
 
 ## Customize Windows terminal and shell
+
+![image](https://user-images.githubusercontent.com/1017451/189542853-90c2414a-72fd-43f4-b173-308a6dc4f7b2.png)
+
 
 1. [Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
@@ -41,15 +44,10 @@
     Install-Module -Name PowerShellGet -Force
     Install-Module PSReadLine -AllowPrerelease -Force
     Install-Module -Name z
-    ```
-
-1. Install OhMyPosh
-
-    ```powershell
     winget install JanDeDobbeleer.OhMyPosh -s winget
     ```
 
-1. Update powershell profile to
+1. Update your PowerShell profile to
 
     ```powershell
     $tools = (Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/Microsoft.PowerShell_profile.ps1")
