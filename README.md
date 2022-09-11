@@ -28,7 +28,7 @@
 
 ## Customize Windows terminal and shell
 
-![image](https://user-images.githubusercontent.com/1017451/189542853-90c2414a-72fd-43f4-b173-308a6dc4f7b2.png)
+![image](https://user-images.githubusercontent.com/1017451/189543010-9057108a-0507-472f-b98c-d6019a0fe5b0.png)
 
 
 1. [Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
