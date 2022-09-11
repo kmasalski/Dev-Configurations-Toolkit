@@ -2,13 +2,13 @@
 
 ## Docker on WSL
 
-1. To [install WSL](https://docs.microsoft.com/en-us/windows/wsl/install#install-wsl-command) run as administrator
+1. [Install WSL](https://docs.microsoft.com/en-us/windows/wsl/install#install-wsl-command) (run as administrator)
 
     ```powershell
     wsl --install
     ```
 
-1. then increase available resources
+1. Increase available resources
 
     ```powershell
     notepad "$env:USERPROFILE/.wslconfig"
@@ -16,70 +16,72 @@
 
 1. [install docker and docker compose](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
-## Applications
+## Default applications
 
-Install winget from msstore
+1. Install winget from msstore
+1. Install default applications
 
-```powershell
-Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/winget.json" -OutFile winget.json
-winget import winget.json
-```
+    ```powershell
+    Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/winget.json" -OutFile winget.json
+    winget import winget.json
+    ```
 
 ## Customize Windows terminal and shell
 
-[Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
+1. [Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
-cd nerd-fonts
-./install.ps1 CascadiaCode
+    ```
+    cd nerd-fonts
+    ./install.ps1 CascadiaCode
+    ```
+1. Install shell customization tools
 
-### Shell customization
+    ```powershell
+    Install-Module -Name Terminal-Icons -Repository PSGallery
+    Install-Module -Name PowerShellGet -Force
+    Install-Module PSReadLine -AllowPrerelease -Force
+    Install-Module -Name z
+    ```
 
-```powershell
-Install-Module -Name Terminal-Icons -Repository PSGallery
-Install-Module -Name PowerShellGet -Force
-Install-Module PSReadLine -AllowPrerelease -Force
-Install-Module -Name z
-```
+1. Install OhMyPosh
 
-#### OhMyPosh
+    ```powershell
+    winget install JanDeDobbeleer.OhMyPosh -s winget
+    ```
 
-```powershell
-winget install JanDeDobbeleer.OhMyPosh -s winget
-```
+1. Update powershell profile to
 
-#### Update powershell profile to
+    ```powershell
+    $tools = (Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/Microsoft.PowerShell_profile.ps1")
+    Invoke-Expression($tools.Content)
+    ```
 
-```powershell
-$tools = (Invoke-WebRequest "https://raw.githubusercontent.com/kmasalski/tools/main/Microsoft.PowerShell_profile.ps1")
-Invoke-Expression($tools.Content)
-```
-
-or copy contents of `Microsoft.PowerShell_profile.ps1`
+1. or copy contents of `Microsoft.PowerShell_profile.ps1` to your profile file
 
 ## Git config
 
-["git pull" automatically stash and pop pending changes](https://stackoverflow.com/a/30209750/1219811)
+1. [Automatically stash and pop pending changes when using "git pull"](https://stackoverflow.com/a/30209750/1219811)
 
-```powershell
-git config --global pull.rebase true
-git config --global rebase.autoStash true
-```
+    ```powershell
+    git config --global pull.rebase true
+    git config --global rebase.autoStash true
+    ```
 
-["git push" automatically set uptream](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
+1. [Automatically set uptream when using "git push"](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
 
-```powershell
-git config --global push.default current
-```
+    ```powershell
+    git config --global push.default current
+    ```
 
-[Default git editor](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages)
+1. [Set default git editor](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages)
 
-```powershell
-git config --global core.editor "code"
-```
+    ```powershell
+    git config --global core.editor "code"
+    ```
 
-User name and email
+1. Set user name and email
 
-```powershell
-git config --global user.email ""
-git config --global user.name ""
-```
+    ```powershell
+    git config --global user.email ""
+    git config --global user.name ""
+    ```
