@@ -45,6 +45,8 @@
     Install-Module PSReadLine -AllowPrerelease -Force
     Install-Module -Name z
     winget install JanDeDobbeleer.OhMyPosh -s winget
+    iwr -useb get.scoop.sh | iex
+    scoop install lsd
     ```
 
 1. Update your PowerShell profile to
