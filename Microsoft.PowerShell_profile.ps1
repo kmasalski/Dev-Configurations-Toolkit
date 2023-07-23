@@ -156,3 +156,5 @@ function Start-ProcessIfNotRunning {
      }
    }
 }
+
+Set-Alias  -Name ls -Value lsd
