@@ -5,79 +5,73 @@
         {
             "Packages": [
                 {
-                    "PackageIdentifier": "Google.Chrome"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.WindowsTerminal"
-                },
-                {
-                    "PackageIdentifier": "Notepad++.Notepad++"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.PowerShell"
-                },
-                {
                     "PackageIdentifier": "7zip.7zip"
-                },
-                {
-                    "PackageIdentifier": "Git.Git"
-                },
-                {
-                    "PackageIdentifier": "Greenshot.Greenshot"
-                },
-                {
-                    "PackageIdentifier": "OpenJS.NodeJS"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.VisualStudioCode"
                 },
                 {
                     "PackageIdentifier": "Adobe.Acrobat.Reader.64-bit"
                 },
                 {
+                    "PackageIdentifier": "Anki.Anki"
+                },
+                {
+                    "PackageIdentifier": "DominikReichl.KeePass"
+                },
+                {
+                    "PackageIdentifier": "Git.Git"
+                },
+                {
+                    "PackageIdentifier": "Google.Chrome"
+                },
+                {
+                    "PackageIdentifier": "Greenshot.Greenshot"
+                },
+                {
+                    "PackageIdentifier": "JFLarvoire.Ag"
+                },
+                {
+                    "PackageIdentifier": "JetBrains.Toolbox"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.AzureStorageExplorer"
+                },
+                {
                     "PackageIdentifier": "Microsoft.DotNet.SDK.6"
                 },
                 {
-                    "PackageIdentifier": "Anki.Anki"
+                    "PackageIdentifier": "Microsoft.PowerShell"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.PowerToys"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
+                },
+                {
+                    "PackageIdentifier": "Microsoft.VisualStudioCode"
+                },
+                {
+                    "PackageIdentifier": "NickeManarin.ScreenToGif"
+                },
+                {
+                    "PackageIdentifier": "Notepad++.Notepad++"
+                },
+                {
+                    "PackageIdentifier": "OBSProject.OBSStudio"
+                },
+                {
+                    "PackageIdentifier": "OpenJS.NodeJS"
                 },
                 {
                     "PackageIdentifier": "Postman.Postman"
                 },
                 {
-                    "PackageIdentifier": "JetBrains.Toolbox"
+                    "PackageIdentifier": "RescueTime.DesktopApp"
                 },
                 {
                     "PackageIdentifier": "WinMerge.WinMerge"
                 },
                 {
                     "PackageIdentifier": "XMind.XMind"
-                },
-                {
-                    "PackageIdentifier": "Zoom.Zoom"
-                },
-                {
-                    "PackageIdentifier": "DominikReichl.KeePass"
-                },
-                {
-                    "PackageIdentifier": "RescueTime.DesktopApp"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.AzureStorageExplorer"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
-                },
-                {
-                    "PackageIdentifier": "Microsoft.PowerToys"
-                },
-                {
-                    "PackageIdentifier": "OBSProject.OBSStudio"
-                },
-                {
-                    "PackageIdentifier": "NickeManarin.ScreenToGif"
-                }, 
-                {
-                    "PackageIdentifier": "JFLarvoire.Ag"
                 }
             ],
             "SourceDetails": {

@@ -4,7 +4,7 @@ Set-PSReadLineOption -PredictionViewStyle ListView
 Set-PSReadLineOption -EditMode Windows
 
 
-## Shorcuts for our commands
+## Shortcuts for our commands
 Set-PSReadLineKeyHandler -Key Ctrl+Shift+b `
    -BriefDescription BuildCurrentDirectory `
    -LongDescription "dotnet Build the current directory" `
