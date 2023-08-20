@@ -1,13 +1,9 @@
 # Dev tools and configs
 
-*Please note that the guide reflects my preferences and practices that work well for me.*
-
 This repository stores configurations and installation instructions with an aim
-to create the development environment on your Windows machine.
+to create the (opinionated) development environment on your Windows machine.
 
-As well,
-you can find here example backup of configuration files and list of mundane tasks
-that should be performed on a new developer machine.
+You'll also find example backup configuration files and a list of mundane tasks for setting up a new developer machine.
 
 ## Default applications
 
