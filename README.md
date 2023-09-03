@@ -101,7 +101,7 @@ easier.
     Enable global .gitignore file
 
     ```powershell
-    git config --global core.excludesFile "%USERPROFILE%\.gitignore"
+    git config --global core.excludesfile ~/.gitignore
     ```
 
     Then create the .gitignore file.
