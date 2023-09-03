@@ -27,7 +27,9 @@ easier.
 1. [Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
     ```powershell
-    iwr -useb get.scoop.sh | iex; scoop bucket add nerd-fonts; scoop install Hack-NF
+    iwr -useb get.scoop.sh | iex;
+    scoop bucket add nerd-fonts;
+    scoop install Hack-NF;
     ```
 
 2. Install shell customization tools
@@ -71,7 +73,8 @@ easier.
    Simplifies workflow when pulling changes
 
     ```powershell
-    git config --global pull.rebase true; git config --global rebase.autoStash true
+    git config --global pull.rebase true;
+    git config --global rebase.autoStash true;
     ```
 
 2. [Automatically set upstream when using "git push"](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
@@ -93,7 +96,8 @@ easier.
 4. Set username and email
 
     ```powershell
-    git config --global user.email ""; git config --global user.name ""
+    git config --global user.email "";
+    git config --global user.name "";
     ```
 
 5. [Globally ignore files](https://stackoverflow.com/questions/7335420/global-git-ignore)
@@ -120,7 +124,8 @@ easier.
 6. Auto correct spelling mistakes
 
     ```powershell
-    git config --global help.autocorrect 1; git config --global help.autocorrectDelay 30
+    git config --global help.autocorrect 1;
+    git config --global help.autocorrectDelay 30;
     ```
 
 ## Docker on WSL
