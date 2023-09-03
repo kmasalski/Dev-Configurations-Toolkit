@@ -1,0 +1,13 @@
+[user]
+	email = xx
+	name = xx
+[core]
+	editor = code
+	excludesfile = ~/.gitignore
+[help]
+	autocorrect = 1
+	autocorrectDelay = 30
+[pull]
+	rebase = true
+[rebase]
+	autoStash = true

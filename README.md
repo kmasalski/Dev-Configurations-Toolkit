@@ -27,7 +27,7 @@ easier.
 1. [Install nerd fonts](https://github.com/ryanoasis/nerd-fonts)
 
     ```powershell
-    iwr -useb get.scoop.sh | iex; scoop bucket add nerd-fonts; scoop install Cascadia-Code
+    iwr -useb get.scoop.sh | iex; scoop bucket add nerd-fonts; scoop install Hack-NF
     ```
 
 2. Install shell customization tools
@@ -50,18 +50,26 @@ easier.
     ```
 
 3. Update your PowerShell profile to [Microsoft.PowerShell_profile.ps1](Microsoft.PowerShell_profile.ps1)
+
     ```powershell
     code $PROFILE
     ```
+
    [Microsoft.PowerShell_profile.ps1](Microsoft.PowerShell_profile.ps1) configures and customizes the behavior of the
    PSReadLine module in Windows Terminal for PowerShell.
    It also defines several functions and aliases for various tasks and utilities.
+
+4. Set font to `Hack Nerd Font` in:
+   1. Visual Studio Code <https://ohmyposh.dev/docs/installation/fonts>
+   2. Windows Terminal <https://ohmyposh.dev/docs/installation/fonts>
+   3. JetBrains IDE: File -> Settings -> Editor -> Colors & Fonts -> Console Font.
 
 ## Git config
 
 1. [Automatically stash and pop pending changes when using "git pull"](https://stackoverflow.com/a/30209750/1219811)
 
    Simplifies workflow when pulling changes
+
     ```powershell
     git config --global pull.rebase true; git config --global rebase.autoStash true
     ```
@@ -69,6 +77,7 @@ easier.
 2. [Automatically set upstream when using "git push"](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
 
    Simplifies workflow when pushing a branch for the first time
+
     ```powershell
     git config --global push.default current
     ```
@@ -76,6 +85,7 @@ easier.
 3. [Set default git editor](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages)
 
    Example script that set up Visual Studio Code as a default git editor.
+
     ```powershell
     git config --global core.editor "code"
     ```
@@ -83,8 +93,34 @@ easier.
 4. Set username and email
 
     ```powershell
-    git config --global user.email ""
-    git config --global user.name ""
+    git config --global user.email ""; git config --global user.name ""
+    ```
+
+5. [Globally ignore files](https://stackoverflow.com/questions/7335420/global-git-ignore)
+
+    Enable global .gitignore file
+
+    ```powershell
+    git config --global core.excludesFile "%USERPROFILE%\.gitignore"
+    ```
+
+    Then create the .gitignore file.
+
+    ```powershell
+    code "$env:USERPROFILE/.gitignore"
+    ```
+
+    The contents may vary by your IDEs, tools used. [GitHub's collection of templates to use globally](https://github.com/github/gitignore/tree/main/Global). Below is example configuration.
+
+    ```txt
+    .idea/
+    .code/
+    ```
+
+6. Auto correct spelling mistakes
+
+    ```powershell
+    git config --global help.autocorrect 1; git config --global help.autocorrectDelay 30
     ```
 
 ## Docker on WSL
