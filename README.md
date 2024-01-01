@@ -42,11 +42,12 @@ easier.
       syntax highlighting
     * [posh-git](https://github.com/dahlbyk/posh-git) - git status and git commands tab completion
 
+    As administrator run following:
+
     ```powershell
     Install-Module -Name z;
     Install-Module -Name Terminal-Icons -Repository PSGallery;
     scoop install lsd
-    winget install JanDeDobbeleer.OhMyPosh -s winget;
     Install-Module PSReadLine;
     Install-Module posh-git;
     ```

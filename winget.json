@@ -32,10 +32,10 @@
                     "PackageIdentifier": "JetBrains.Toolbox"
                 },
                 {
-                    "PackageIdentifier": "Microsoft.AzureStorageExplorer"
+                    "PackageIdentifier": "Microsoft.Azure.StorageExplorer"
                 },
                 {
-                    "PackageIdentifier": "Microsoft.DotNet.SDK.6"
+                    "PackageIdentifier": "Microsoft.DotNet.SDK.8"
                 },
                 {
                     "PackageIdentifier": "Microsoft.PowerShell"
@@ -72,6 +72,9 @@
                 },
                 {
                     "PackageIdentifier": "XMind.XMind"
+                },
+                {
+                    "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
                 }
             ],
             "SourceDetails": {
