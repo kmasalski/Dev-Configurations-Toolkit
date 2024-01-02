@@ -1,19 +1,15 @@
 # Dev tools and configs
 
-This repository stores configurations and installation instructions with an aim
-to create the (opinionated) development environment on your Windows machine.
+This repository stores configurations and installation instructions with an aim to create the (opinionated) development environment on your Windows machine.
 
 You'll also find example backup configuration files and a list of mundane tasks for setting up a new developer machine.
 
 ## Default applications
 
-Use `winget` (Microsoft's package manager) to streamline the installation of essential applications for
-Windows.
-The repository provides a predefined list of popular applications in `winget.json` to make the setup process
-easier.
+Use `winget` (Microsoft's package manager) to streamline the installation of essential applications for Windows.
+The repository provides a predefined list of popular applications in `winget.json` to make the setup process easier.
 
-1. Install `winget`
-   from [Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)
+1. Install `winget` from [Microsoft Store](https://www.microsoft.com/p/app-installer/9nblggh4nns1#activetab=pivot:overviewtab)
 2. Install applications using `winget import`.
 
     ```powershell
@@ -35,11 +31,9 @@ easier.
 2. Install shell customization tools
 
     * [z](https://github.com/badmotorfinger/z) - quickly navigate the file system
-    * [lsd](https://github.com/devblackops/Terminal-Icons) or [TerminalIcons](https://github.com/lsd-rs/lsd) - upgrade
-      the ls view
+    * [lsd](https://github.com/devblackops/Terminal-Icons) or [TerminalIcons](https://github.com/lsd-rs/lsd) - upgrade the ls view
     * [JanDeDobbeleer.OhMyPosh](https://ohmyposh.dev/) - themes for shell
-    * [PSReadLine](https://github.com/PowerShell/PSReadLine) - upgrades the command line with features like shortcuts or
-      syntax highlighting
+    * [PSReadLine](https://github.com/PowerShell/PSReadLine) - upgrades the command line with features like shortcuts or syntax highlighting
     * [posh-git](https://github.com/dahlbyk/posh-git) - git status and git commands tab completion
 
     As administrator run following:
@@ -58,8 +52,7 @@ easier.
     code $PROFILE
     ```
 
-   [Microsoft.PowerShell_profile.ps1](Microsoft.PowerShell_profile.ps1) configures and customizes the behavior of the
-   PSReadLine module in Windows Terminal for PowerShell.
+   [Microsoft.PowerShell_profile.ps1](Microsoft.PowerShell_profile.ps1) configures and customizes the behavior of the PSReadLine module in Windows Terminal for PowerShell.
    It also defines several functions and aliases for various tasks and utilities.
 
 4. Set font to `Hack Nerd Font` in:
@@ -125,9 +118,18 @@ easier.
 6. Auto correct spelling mistakes
 
     ```powershell
-    git config --global help.autocorrect 1;
-    git config --global help.autocorrectDelay 30;
+    git config --global help.autocorrect 30;
     ```
+
+## Block distracting websites through host file
+
+1. Open `hosts` file
+
+    ```powershell
+    code C:\Windows\System32\drivers\etc\hosts
+    ```
+
+2. Update contents of file to [attached example](hosts)
 
 ## Docker on WSL
 

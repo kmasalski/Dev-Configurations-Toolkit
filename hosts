@@ -1,0 +1,15 @@
+# Block social media sites
+
+127.0.0.1    facebook.com www.facebook.com
+127.0.0.1    twitter.com www.twitter.com
+127.0.0.1    instagram.com www.instagram.com
+
+# Block time-wasting sites
+
+127.0.0.1    reddit.com www.reddit.com
+127.0.0.1    cnn.com www.cnn.com
+127.0.0.1    msn.com www.msn.com
+
+# Block entertainment sites
+
+127.0.0.1    netflix.com www.netflix.com
