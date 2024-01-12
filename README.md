@@ -146,3 +146,13 @@ The repository provides a predefined list of popular applications in `winget.jso
     ```
 
 3. [Install docker and docker compose at wsl](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
+
+## Git hooks
+
+This repository includes a pre-commit git hook that helps automate repetitive tasks before each commit in .net projects. The hook performs the following tasks:
+
+1. Runs `dotnet build` to ensure that the code compiles
+1. Executes `dotnet test` to ensure that tests pass
+1. Formats changed `.cs` files using `dotnet format`
+
+To use the pre-commit git hook in your environment, copy the [pre-commit](git/hooks/pre-commit) file to the `.git/hooks/` directory of your project.
