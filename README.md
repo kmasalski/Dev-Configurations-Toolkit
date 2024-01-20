@@ -126,13 +126,13 @@ The repository provides a predefined list of popular applications in `winget.jso
 
 You can redirect time-wasting sites to a non-existent or restricted IP address. This technique helps enhance productivity by reducing the temptation to visit time-wasting or distracting online platforms.
 
-Open `hosts` file
+1. Open `hosts` file
 
     ```powershell
     code C:\Windows\System32\drivers\etc\hosts
     ```
 
-Thenn update the contents to the [attached example](hosts)
+2. Then update the contents to the [attached example](hosts)
 
 ## Docker on Windows Subsystem for Linux (WSL)
 
