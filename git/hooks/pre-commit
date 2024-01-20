@@ -1,16 +1,12 @@
 #!/bin/sh
 
-dotnet build
-
-# Fail script if necessary
-if [ $? -ne 0 ]; then
+if ! dotnet build;
+then
     exit 1
 fi
 
-dotnet test
-
-# Fail script if necessary
-if [ $? -ne 0 ]; then
+if ! dotnet test;
+then
     exit 1
 fi
 
@@ -18,11 +14,8 @@ fi
 FILES=$(git diff --name-only --staged -- "*.cs")
 if [ -n "$FILES" ]
 then
-    dotnet format --include $FILES
+    if ! dotnet format --include $FILES; then
+      exit 1
+    fi
     echo "$FILES" | xargs git add
-fi
-
-# Fail script if necessary
-if [ $? -ne 0 ]; then
-    exit 1
 fi

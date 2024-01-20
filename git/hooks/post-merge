@@ -1,0 +1,16 @@
+#!/bin/sh
+
+#https://dev.to/zirkelc/automatically-install-npm-dependencies-on-git-pull-bg0
+
+IFS=$'\n'
+
+PACKAGE_LOCK_REGEX="(^packages\/.*\/package-lock\.json)|(^package-lock\.json)"
+PACKAGES=("$(git diff --name-only HEAD@{1} HEAD | grep -E "$PACKAGE_LOCK_REGEX")")
+
+if [[ ${PACKAGES[@]} ]]; then
+  for package in $PACKAGES; do
+    echo "$package was changed. Running npm install to update your dependencies..."
+    DIR=$(dirname package)
+    cd "$DIR" && npm install
+  done
+fi

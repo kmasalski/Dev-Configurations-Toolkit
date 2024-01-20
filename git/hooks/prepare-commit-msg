@@ -1,0 +1,12 @@
+#!/bin/sh
+
+NAME=$(git branch | grep '*' | sed 's/* //')
+
+# Check the branch name for an issue number
+ISSUE_NUMBER=`echo "$NAME" | egrep -o '[0-9]{4,9}'`
+
+# If branch contains a match for an issue number add it to the commit
+if [ -n "$ISSUE_NUMBER" ] 
+then
+   echo "[#$ISSUE_NUMBER]" $(cat "$1") > "$1"
+fi
