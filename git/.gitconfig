@@ -4,6 +4,7 @@
 [core]
 	editor = code
 	excludesfile = ~/.gitignore
+	hooksPath = ~/.githooks
 [help]
 	autocorrect = 1
 	autocorrectDelay = 30

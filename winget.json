@@ -47,6 +47,9 @@
                     "PackageIdentifier": "Microsoft.PowerToys"
                 },
                 {
+                    "PackageIdentifier" : "Microsoft.WindowsTerminal"
+                },
+                {
                     "PackageIdentifier": "Microsoft.SQLServerManagementStudio"
                 },
                 {
@@ -72,9 +75,6 @@
                 },
                 {
                     "PackageIdentifier": "WinMerge.WinMerge"
-                },
-                {
-                    "PackageIdentifier": "XMind.XMind"
                 },
                 {
                     "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"

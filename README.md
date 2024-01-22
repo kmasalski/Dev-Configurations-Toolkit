@@ -1,4 +1,4 @@
-# Set Up a Productive Windows Development Environment
+# Set up a productive Windows development environment
 
 This repository is designed to streamline the configuration process and provide easy installation instructions for creating an opinionated development environment on your Windows machine.
 
@@ -17,7 +17,7 @@ The repository provides a predefined list of popular applications in `winget.jso
     winget import winget.json
     ```
 
-## Customize Windows Terminal and Shell for Development Productivity
+## Customize Windows Terminal and shell for development productivity
 
 ![image](https://user-images.githubusercontent.com/1017451/189543010-9057108a-0507-472f-b98c-d6019a0fe5b0.png)
 
@@ -61,67 +61,6 @@ The repository provides a predefined list of popular applications in `winget.jso
     2. Windows Terminal <https://ohmyposh.dev/docs/installation/fonts>
     3. JetBrains IDE: File -> Settings -> Editor -> Colors & Fonts -> Console Font.
 
-## Git config
-
-1. [Automatically stash and pop pending changes when using "git pull"](https://stackoverflow.com/a/30209750/1219811)
-
-    Simplifies workflow when pulling changes
-
-    ```powershell
-    git config --global pull.rebase true;
-    git config --global rebase.autoStash true;
-    ```
-
-2. [Automatically set upstream when using "git push"](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
-
-    Simplifies workflow when pushing a branch for the first time
-
-    ```powershell
-    git config --global push.default current
-    ```
-
-3. [Set default git editor](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages)
-
-    An example command that sets up Visual Studio Code as a default git editor.
-
-    ```powershell
-    git config --global core.editor "code"
-    ```
-
-4. Set username and email
-
-    ```powershell
-    git config --global user.email "";
-    git config --global user.name "";
-    ```
-
-5. [Globally ignore files](https://stackoverflow.com/questions/7335420/global-git-ignore)
-
-    Enable global .gitignore file
-
-    ```powershell
-    git config --global core.excludesfile ~/.gitignore
-    ```
-
-    Then create the .gitignore file.
-
-    ```powershell
-    code "$env:USERPROFILE/.gitignore"
-    ```
-
-    The contents may vary by your IDEs and tools used. [GitHub's collection of templates to use globally](https://github.com/github/gitignore/tree/main/Global). Below is an example configuration.
-
-    ```txt
-    .idea/
-    .code/
-    ```
-
-6. Autocorrect spelling mistakes
-
-    ```powershell
-    git config --global help.autocorrect 30
-    ```
-
 ## Block distracting websites
 
 You can redirect time-wasting sites to a non-existent or restricted IP address. This technique helps enhance productivity by reducing the temptation to visit time-wasting or distracting online platforms.
@@ -145,15 +84,83 @@ You can redirect time-wasting sites to a non-existent or restricted IP address. 
 2. To improve performance, adjust the amount of memory and processors used by updating the `.wslconfig` file.
 
     ```powershell
-    code "$env:USERPROFILE/.wslconfig"
+    code ~/.wslconfig
     ```
 
 3. [Install docker and docker compose at wsl](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
 
+## Git config
+
+1. [Automatically stash and pop pending changes when using "git pull"](https://stackoverflow.com/a/30209750/1219811)
+
+   Simplifies workflow when pulling changes
+
+    ```powershell
+    git config --global pull.rebase true;
+    git config --global rebase.autoStash true;
+    ```
+
+2. [Automatically set upstream when using "git push"](https://stackoverflow.com/questions/6089294/why-do-i-need-to-do-set-upstream-all-the-time)
+
+   Simplifies workflow when pushing a branch for the first time
+
+    ```powershell
+    git config --global push.default current
+    ```
+
+3. [Set default git editor](https://stackoverflow.com/questions/2596805/how-do-i-make-git-use-the-editor-of-my-choice-for-editing-commit-messages)
+
+   Use the following command to set up Visual Studio Code or your preferred text editor as the default Git editor. 
+   Ensure it is installed and available in your system's PATH.
+
+    ```powershell
+    git config --global core.editor "code"
+    ```
+
+4. Set username and email
+
+    ```powershell
+    git config --global user.email "";
+    git config --global user.name "";
+    ```
+
+5. [Globally ignore files](https://stackoverflow.com/questions/7335420/global-git-ignore)
+
+   Enable global .gitignore file
+
+    ```powershell
+    git config --global core.excludesfile ~/.gitignore
+    ```
+
+   Then create the .gitignore file.
+
+    ```powershell
+    code ~/.gitignore
+    ```
+
+   The contents may vary by your IDEs and tools used. [GitHub's collection of templates to use globally](https://github.com/github/gitignore/tree/main/Global). Below is an example configuration.
+
+    ```txt
+    .idea/
+    .code/
+    ```
+
+6. Autocorrect spelling mistakes
+
+    ```powershell
+    git config --global help.autocorrect 30
+    ```
+
 ## Git hooks
 
 This repository contains Git hooks that automate tasks during different stages of development.
-To use the Git hooks in your environment, copy the files from [hooks](git/hooks) to the `.git/hooks/` directory in your project.
+To use the Git hooks:
+* in your project environment, copy the files from [hooks](git/.githooks) to the `.git/hooks/` directory in your project
+* in all your projects, run the following command in terminal:
+    ```powershell
+    git config --global core.hooksPath ~/.githooks
+    ```
+    and then copy from [hooks](git/.githooks) to the `~/.githooks` directory.
 
 ### Pre-commit git hook
 
