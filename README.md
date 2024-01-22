@@ -84,7 +84,7 @@ You can redirect time-wasting sites to a non-existent or restricted IP address. 
 2. To improve performance, adjust the amount of memory and processors used by updating the `.wslconfig` file.
 
     ```powershell
-    code ~/.wslconfig
+     code $env:userprofile/.wslconfig
     ```
 
 3. [Install docker and docker compose at wsl](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository)
@@ -135,7 +135,7 @@ You can redirect time-wasting sites to a non-existent or restricted IP address. 
    Then create the .gitignore file.
 
     ```powershell
-    code ~/.gitignore
+    code $env:userprofile/.gitignore
     ```
 
    The contents may vary by your IDEs and tools used. [GitHub's collection of templates to use globally](https://github.com/github/gitignore/tree/main/Global). Below is an example configuration.
