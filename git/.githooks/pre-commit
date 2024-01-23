@@ -1,5 +1,12 @@
 #!/bin/sh
 
+found_files=$(find . -type f -name "*.sln")
+
+# Check if any *.sln files were found
+if [ -z "$found_files" ]; then
+  exit 0
+fi
+
 if ! dotnet build;
 then
     exit 1
