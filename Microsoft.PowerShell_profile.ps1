@@ -28,6 +28,29 @@ Import-Module Terminal-Icons
 Import-Module posh-git
 oh-my-posh --init --shell pwsh --config $env:POSH_THEMES_PATH/jandedobbeleer.omp.json | Invoke-Expression
 
+function SyncDotNetProject {
+    param (
+        [string]$projectPath,
+        [string]$databasePath,
+        [string]$applicationPath,
+        [string]$packagesJsonPath,
+        [string]$mainBranch
+    )
+    cd $projectPath
+
+    dotnet build
+    if (-not$?)
+    {
+        throw "Failed build. Exiting."
+    }
+
+    git pull
+    git stash
+    git merge $mainBranch
+    git stash apply
+
+    dotnet ef database update -p $databasePath -s $applicationPath
+}
 
 
 <#
