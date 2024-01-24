@@ -18,7 +18,7 @@ then
 fi
 
 # Format changed .cs files and add them again
-FILES=$(git diff --name-only --staged -- "*.cs")
+FILES=$(git diff --name-only --staged  --diff-filter=d -- "*.cs")
 if [ -n "$FILES" ]
 then
     if ! dotnet format --include $FILES; then
