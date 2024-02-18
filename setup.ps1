@@ -16,3 +16,7 @@ Install-Module -Name Terminal-Icons -Repository PSGallery;
 scoop install lsd
 Install-Module PSReadLine;
 Install-Module posh-git;
+
+#installs structurizr
+scoop bucket add extras
+scoop install structurizr-cli
