@@ -78,7 +78,10 @@
                 },
                 {
                     "PackageIdentifier": "JanDeDobbeleer.OhMyPosh"
-                }
+                },
+                {
+                    "PackageIdentifier": "EclipseAdoptium.Temurin.21.JDK"
+                }                
             ],
             "SourceDetails": {
                 "Argument": "https://cdn.winget.microsoft.com/cache",
